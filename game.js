@@ -1,4 +1,5 @@
-const userSelection = prompt("Please enter an option");
+const playerSelection = prompt("Please enter an option").toLowerCase();
+const computerSelection = computerPlay();
 
 function computerPlay() {
 
@@ -10,9 +11,9 @@ function computerPlay() {
 }
 
 function playRound(playerSelection,computerSelection) {
-    const computerSelection = computerPlay();
-    const playerSelection = userSelection.toLowerCase();
-    let message = "";
+          
+    
+           let message = "";
 
     //If playerSelection is rock
 
@@ -49,5 +50,16 @@ function playRound(playerSelection,computerSelection) {
     }
 
       return message;
+}
+
+function game() {
+    let result = "";
+    for (let i = 0; i < 5; i++) {
+            result =  playRound(playerSelection,computerSelection);
+        
+    }
+    console.log(result);
+    return result;
+    
 }
 
